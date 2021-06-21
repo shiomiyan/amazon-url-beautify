@@ -14,7 +14,7 @@ fn main() {
         .get_matches();
 
         if let Some(url) = matches.value_of("URL") {
-            let result = url::parser::get_asin(url);
-            println!("https://www.amazon.co.jp/dp/{}", result);
+            let asin = url::parser::get_asin(url);
+            println!("https://www.amazon.co.jp/dp/{}", asin);
         }
 }
