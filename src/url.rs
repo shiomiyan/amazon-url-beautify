@@ -2,7 +2,7 @@ pub mod parser {
     use regex::Regex;
 
     pub fn get_asin(url: &str) -> &str {
-        let re = Regex::new(r"/dp/([A-Z0-9]+)/").unwrap();
+        let re = Regex::new(r"/dp/([A-Z0-9]+)/|\?").unwrap();
         re.captures(url).unwrap().get(1).unwrap().as_str()
     }
 }
